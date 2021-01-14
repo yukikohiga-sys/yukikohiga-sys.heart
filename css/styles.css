@@ -7,8 +7,8 @@ body {
    display: inline-flex;
    justify-content: center;
    align-items: center;
-   width: 76;
-   height: 76;
+   width: 176;
+   height: 176;
    border-radius: 50%;
    transition: background .3s;
 }
@@ -22,7 +22,7 @@ body {
   }
 
 .heart {
-  font-size: 50px;
+  font-size: 150px;
   color: #e4e4e4;
   user-select: none;
   position: relative;
@@ -51,8 +51,8 @@ body {
 
   .ripple {
     position: absolute;  
-    width: 110px;
-    height: 110px;
+    width: 210px;
+    height: 210px;
     background: red;
     border-radius: 50%;
     transform: scale(0);
