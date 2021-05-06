@@ -1,8 +1,8 @@
 
-let img
+let img;
 
 function preload() {
-  img = loadImage('animal2.png');
+  img = loadImage('15puzzle.png');
 }
 
 function setup() {
