@@ -1,3 +1,4 @@
+
 let img
 
 function preload() {
@@ -11,5 +12,4 @@ function setup() {
 }
 function draw() {
   image(img,0,0,400,300);
-}
-    
+}  
