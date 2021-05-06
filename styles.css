@@ -1,0 +1,126 @@
+body {
+  padding: 40px;  
+}
+
+.like {
+   cursor: pointer;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 176;
+   height: 176;
+   border-radius: 50%;
+   transition: background .3s;
+}
+
+.like:hover {
+   background: #f5f5f5; 
+}
+
+.like [type="checkbox"] {
+    display: none;
+  }
+
+.heart {
+  font-size: 150px;
+  color: #e4e4e4;
+  user-select: none;
+  position: relative;
+  top: 1px;
+
+}
+
+.like [type="checkbox"]:checked ~ .heart {
+   animation-name: heart;
+   animation-duration: .6s;
+   animation-fill-mode: forwards;
+  }
+
+  @keyframes heart {
+     0% {
+       transform: scale(0);
+     } 
+     50% {
+       transform: scale(1.1);
+     } 
+     100% {
+       transform: scale(1);
+       color: red;
+     } 
+  }
+
+  .ripple {
+    position: absolute;  
+    width: 210px;
+    height: 210px;
+    background: red;
+    border-radius: 50%;
+    transform: scale(0);
+  }
+  
+  
+  .like [type="checkbox"]:checked ~ .ripple {
+    animation-name: ripple;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+   }
+ 
+   @keyframes ripple {
+      0% {
+        transform: scale(0);
+      } 
+      50% {
+        transform: scale(1.1);
+      } 
+      100% {
+        transform: scale(1);
+        opacity: 0;
+      } 
+   }
+ 
+   
+   .message {
+      width: 400;
+      padding: 8px 16px;
+      background: #0ac539;
+      color: #ddd;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+      position: fixed;
+      right: 32px;
+      bottom: 32px;
+
+      animation: popup 2s forwards;
+   }
+
+   @keyframes popup {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+      animation-timing-function: ease-out;
+    } 
+    20% {
+      transform:none;
+      opacity: 1;
+
+    } 
+    80% {
+      transform: none;
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(20px);
+      opacity: 0;
+      pointer-events: none;
+    } 
+   }
+
+   button {
+    width: 400;
+    padding: 8px 16px;
+    
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+   }
