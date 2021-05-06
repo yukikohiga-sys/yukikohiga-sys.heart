@@ -1,4 +1,4 @@
-let img;
+let img
 
 function preload() {
   img = loadImage('animal2.png');
