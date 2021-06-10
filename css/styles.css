@@ -7,12 +7,12 @@ body {
   
 }
 
-.like {
+/* .like {
   
   cursor: pointer;
   user-select: none;
  
-}
+} */
 
 .like [type="checkbox"] {
   display: none;
